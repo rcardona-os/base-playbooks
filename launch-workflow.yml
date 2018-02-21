@@ -1,5 +1,5 @@
 ---
-- hosts: ansible-tower
+- hosts: localhost #ansible-tower
   connection: local
   tasks:
     - name: Job Template to launch a Workflow Job Template (as a workaround, waiting for CloudForms 4.5)
