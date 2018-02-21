@@ -1,9 +1,13 @@
 ---
 # Make a call on REST API
 
-- name: Queue build of a project in Jenkins
-  uri:
-    url: "https://35.190.212.250/api"
-    method: GET
-    user: "{{ cfuser }}"
-    password: "{{ cfpassword }}"
+- hosts: localhost
+  connection: local
+  gather_facts: no
+  tasks:
+  - name: Queue build of a project in Jenkins
+    uri:
+      url: "https://35.190.212.250/api"
+      method: GET
+      user: "{{ cfuser }}"
+      password: "{{ cfpassword }}"
