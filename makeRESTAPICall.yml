@@ -10,5 +10,5 @@
     uri:
       url: "https://35.190.212.250/api"
       method: GET
-      user: "{{ cfuser }}"
-      password: "{{ cfpassword }}"
+      #user: "{{ cfuser }}"
+      #password: "{{ cfpassword }}"
