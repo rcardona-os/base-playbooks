@@ -13,3 +13,4 @@
       validate_certs: false
       user: "{{ cfuser }}"
       password: "{{ cfpassword }}"
+      return_content: yes
