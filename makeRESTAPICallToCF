@@ -1,0 +1,17 @@
+---
+# Make a call on REST API
+
+- name: Make a call on REST API
+  hosts: localhost
+  connection: local
+  gather_facts: False
+  tasks:
+  - name: Make a call on REST API
+    uri:
+      url: "https://35.190.212.250/api"
+      method: GET
+      validate_certs: false
+      user: "{{ cfuser }}"
+      password: "{{ cfpassword }}"
+      body: "{{ lookup('file','issue.json') }}"
+      body_format: json
