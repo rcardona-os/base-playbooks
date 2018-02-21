@@ -4,11 +4,12 @@
 - name: Make a call on REST API
   hosts: localhost
   connection: local
-  gather_facts: no
+  #gather_facts: no
   tasks:
   - name: Make a call on REST API
     uri:
       url: "https://35.190.212.250/api"
       method: GET
+      validate_certs: false
       #user: "{{ cfuser }}"
       #password: "{{ cfpassword }}"
