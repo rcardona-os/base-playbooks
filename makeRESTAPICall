@@ -3,9 +3,7 @@
 
 - name: Queue build of a project in Jenkins
   uri:
-    url: "http://{{ jenkins.host }}/job/{{ jenkins.job }}/build?token={{ jenkins.token }}"
+    url: "https://35.190.212.250/api"
     method: GET
-    user: "{{ jenkins.user }}"
-    password: "{{ jenkins.password }}"
-    force_basic_auth: yes
-    status_code: 201
+    user: "{{ cfuser }}"
+    password: "{{ cfpassword }}"
