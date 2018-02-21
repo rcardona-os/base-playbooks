@@ -13,5 +13,5 @@
       validate_certs: false
       user: "{{ cfuser }}"
       password: "{{ cfpassword }}"
-      body: "{{ lookup('file','issue.json') }}"
+      body: "{{ lookup('file','/tmp/issue.json') }}"
       body_format: json
