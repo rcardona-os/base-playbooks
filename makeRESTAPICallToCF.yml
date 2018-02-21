@@ -13,5 +13,5 @@
       validate_certs: false
       user: "{{ cfuser }}"
       password: "{{ cfpassword }}"
-      body: "{{ lookup('file','/tmp/issue.json') }}"
+      body: '{ "version" : "1.1", "uri_parts" : { "namespace" : "mytest/General", "class" : "Methods", "instance" : "notifyEvent" }, "requester" : { "user_name" : "admin", "auto_approve" : true } }'
       body_format: json
