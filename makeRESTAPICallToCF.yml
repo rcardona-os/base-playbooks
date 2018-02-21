@@ -9,7 +9,7 @@
   - name: Make a call on REST API
     uri:
       url: "https://35.190.212.250/api"
-      method: GET
+      method: POST
       validate_certs: false
       user: "{{ cfuser }}"
       password: "{{ cfpassword }}"
