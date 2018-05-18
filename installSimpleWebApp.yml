@@ -12,7 +12,8 @@
 
   - name: Copy required application package
     copy:
-      src: /tmp/
+      src: simpleWebApp/
       dest: /root/
     with_items:
-    - myAppCI.tar.gz
+    - img_girl.jpg
+    - index.html
