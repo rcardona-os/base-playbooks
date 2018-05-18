@@ -12,7 +12,7 @@
 
   - name: Copy required application package
     copy:
-      src: /root/
+      src: /tmp/
       dest: /root/
     with_items:
     - myAppCI.tar.gz
