@@ -1,0 +1,14 @@
+---
+
+# This install a ramdon website
+
+- hosts: all
+
+  tasks:
+
+  - name: Copy required application package
+    copy:
+      src: /root/
+      dest: /root/
+    with_items:
+    - myAppCI.tar.gz
