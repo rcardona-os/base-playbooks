@@ -13,7 +13,7 @@
   - name: Copy required application package
     copy:
       src: simpleWebApp/
-      dest: /root/
+      dest: /var/www/html/
     with_items:
     - img_girl.jpg
     - index.html
