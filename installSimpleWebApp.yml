@@ -1,5 +1,4 @@
 ---
-
 # This install a ramdon website
 
 - hosts: all
