@@ -1,7 +1,9 @@
 ---
 # This install a ramdon website
 
-- hosts: all
+- name: Installing MySimple WebApp
+  hosts: "{{ serverInstance }}"
+  #hosts: all
   connection: ssh
   remote_user: ec2-user
   become_method : sudo
