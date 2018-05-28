@@ -10,10 +10,10 @@
   become: yes
   gather_facts : yes
   tasks:
-  - name: Copy required application package
-    copy:
-      src: simpleWebApp/
-      dest: /var/www/html/
-    with_items:
-    - img_girl.jpg
-    - index.html
+    - name: Copy required application package
+      copy:
+        src: simpleWebApp/
+        dest: /var/www/html/
+      with_items:
+      - img_girl.jpg
+      - index.html
