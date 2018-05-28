@@ -15,5 +15,5 @@
         src: simpleWebApp/
         dest: /var/www/html/
       with_items:
-      - img_girl.jpg
-      - index.html
+        - img_girl.jpg
+        - index.html
