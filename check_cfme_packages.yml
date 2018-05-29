@@ -2,6 +2,8 @@
 - name: get cfme rpm info 
   hosts: localhost
   connection: local
+  become_method : sudo
+  become: yes
   
   vars:
     - pkg: cfme
