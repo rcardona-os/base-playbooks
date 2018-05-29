@@ -1,13 +1,13 @@
 ---
 - name: Get CFME Package Info 
   #hosts: all
-  #connection: ssh
+  connection: ssh
   remote_user: localuser
   become_method: sudo
   become: yes
   gather_facts: no
   hosts: localhost
-  connection: local
+  #connection: local
   
   vars:
     - pkg: httpd
