@@ -10,7 +10,7 @@
   connection: local
   
   vars:
-    - pkg: cfme
+    - pkg: httpd
     - auto_commit: true
     - manageiq_validate_certs: false
       
