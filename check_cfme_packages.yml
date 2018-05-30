@@ -2,7 +2,7 @@
 - name: Get CFME APACHE PACKAGE 
   hosts: localhost
   connection: local
-  become_method : sudo
+  become_method : su
   become: yes
   gather_facts : no
   
