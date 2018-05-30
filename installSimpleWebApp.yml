@@ -14,5 +14,5 @@
         src: simpleWebApp/
         dest: /var/www/html/
       with_items:
-        - img_girl.jpg
+        - mySuperApp.gif
         - index.html
