@@ -24,6 +24,11 @@
           attribute: "tower_job_id"
           value:  "{{ tower_job_id }}"
           
+    - name: "Get the full list of Objects"
+      manageiq_automate:
+        workspace: "{{ workspace }}"
+        get_object_names: yes
+        
     - name: "Get the list of Method Parameters"
       manageiq_automate:
         workspace: "{{ workspace }}"
