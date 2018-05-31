@@ -1,0 +1,32 @@
+---
+- name: Get CFME APACHE PACKAGE 
+  hosts: localhost
+  connection: local
+  become_method : sudo
+  become: yes
+  gather_facts : no
+  
+  vars:
+    - auto_commit: true
+    - manageiq_validate_certs: false
+      
+  roles:
+    - syncrou.manageiq-automate
+
+  tasks:
+  
+    - name: "Set the job ID back into $evm.root"
+      manageiq_automate:
+        workspace: "{{ workspace }}"
+        set_attribute:
+          object: "root"
+          attribute: "tower_job_id"
+          value:  "{{ tower_job_id }}"
+          
+    - name: "Get the list of Method Parameters"
+      manageiq_automate:
+        workspace: "{{ workspace }}"
+        get_method_parameters: yes
+      register: method_params
+      
+    - debug: msg="The yum output was {{ method_params.stdout }}"
