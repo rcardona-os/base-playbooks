@@ -30,4 +30,4 @@
         get_method_parameters: yes
       register: method_params
       
-    - debug: msg="The yum output was {{ method_params.stdout }}"
+    - debug: msg="OUTPUT  OUTPUT OUTPUT : {{ method_params }}"
