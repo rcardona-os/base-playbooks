@@ -1,7 +1,7 @@
 ---
 - name: Get Package Info 
   hosts: localhost
-  user: "{{ my_local_user }}"
+  remote_user: "{{ my_local_user }}"
   connection: local
   become_method : sudo
   become: yes
