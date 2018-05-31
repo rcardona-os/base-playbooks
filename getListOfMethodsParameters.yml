@@ -1,6 +1,7 @@
 ---
 - name: Get CFME APACHE PACKAGE 
   hosts: localhost
+  ansible_user: "{{ my_local_user }}"
   connection: local
   become_method : sudo
   become: yes
