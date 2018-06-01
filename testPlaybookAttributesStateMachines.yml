@@ -22,10 +22,6 @@
           attribute: "tower_job_id"
           value:  "{{ tower_job_id }}"
 
-    - name: Get yum info
-      shell: date
-      register: date_output
 
-
-    - debug: msg=" WORKSPACE => {{ workspace }} ||| TOWERJOBID => {{ tower_job_id }} ||| TIME => {{ date_output.stdout}}"    
+   #- debug: msg=" WORKSPACE => {{ workspace }} ||| TOWERJOBID => {{ tower_job_id }} ||| TIME => {{ date_output.stdout}}"    
 
