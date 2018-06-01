@@ -23,7 +23,6 @@
           object: "root"
           attribute: "tower_job_id"
           value:  "{{ tower_job_id }}"
-      sudo: no
           
     - name: Get yum info
       shell: yum info "{{ pkg }}"
