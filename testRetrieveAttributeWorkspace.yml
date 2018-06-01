@@ -3,11 +3,23 @@
   hosts: localhost
   connection: local
   gather_facts : no
+
+  vars:
+    - auto_commit: true
+    - manageiq_validate_certs: false
+    
+  roles:
+    - syncrou.manageiq-automate
   
   tasks:
+    - name: "Set the job ID back into $evm.root"
+      manageiq_automate:
+        workspace: "{{ workspace }}"
+        get_attribute:
+          object: "root"
+          attribute: "tower_job_id"
+          value:  "{{ tower_job_id }}"
   
-    - name: "STARTING TEST PLAYBOOK"
-      shell: yum info "{{ pkg }}"
-      register: yum_output
+  tasks:
       
-    - debug: msg="OUTPUT TEST PLAYBOOK {{ yum_output }}"
+    - debug: msg="OUTPUT TEST PLAYBOOK {{ tower_job_id }}"
