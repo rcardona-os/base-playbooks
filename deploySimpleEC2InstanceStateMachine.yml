@@ -37,6 +37,4 @@
           app: "{{  app_name }}"
       register: ec2
 
-
-    #- debug: msg="TESTPLAYBOOKOUTPUT {{ ec2.instances[0].id }}"
-    - debug: msg="TESTPLAYBOOKOUTPUT {{ ec2.instances[0] }}"
+    - debug: msg="PUBLIC IP ADDRESS => {{ ec2.instances[0].public_ip }}"
