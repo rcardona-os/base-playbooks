@@ -16,6 +16,7 @@
     - syncrou.manageiq-automate
 
   tasks:
+    sudo: no
     - name: "Set the job ID back into $evm.root"
       manageiq_automate:
         workspace: "{{ workspace }}"
