@@ -2,8 +2,6 @@
 - name: TEST TEST TEST TEST TEST PLAYBOOK
   hosts: localhost
   connection: local
-  become_method : sudo
-  become: yes
   gather_facts : no
   
   tasks:
