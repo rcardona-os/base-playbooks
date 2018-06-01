@@ -1,0 +1,13 @@
+---
+- name: TEST TEST TEST TEST TEST PLAYBOOK
+  hosts: localhost
+  connection: local
+  gather_facts : no
+  
+  tasks:
+  
+    - name: "STARTING TEST PLAYBOOK"
+      shell: yum info "{{ pkg }}"
+      register: yum_output
+      
+    - debug: msg="OUTPUT TEST PLAYBOOK {{ yum_output }}"
