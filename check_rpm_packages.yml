@@ -16,7 +16,6 @@
     - syncrou.manageiq-automate
 
   tasks:
-    sudo: no
     - name: "Set the job ID back into $evm.root"
       manageiq_automate:
         workspace: "{{ workspace }}"
@@ -24,6 +23,7 @@
           object: "root"
           attribute: "tower_job_id"
           value:  "{{ tower_job_id }}"
+      sudo: no
           
     - name: Get yum info
       shell: yum info "{{ pkg }}"
