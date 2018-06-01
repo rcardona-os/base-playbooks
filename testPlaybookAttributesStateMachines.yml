@@ -22,5 +22,5 @@
           attribute: "tower_job_id"
           value:  "{{ tower_job_id }}"
 
-    - debug: msg=" WORKSPACE => {{ workspace }}  WWWWWWWW WORKSPACE ID => {{ workspace_id }}  WWWWWWWW TOWERJOBID => {{ tower_job_id }}"    
+    - debug: msg=" WORKSPACE => {{ workspace }}  WWWWWWWW WORKSPACE ID => {{ workspace.id }}  WWWWWWWW TOWERJOBID => {{ tower_job_id }}"    
 
