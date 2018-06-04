@@ -7,4 +7,4 @@
   tasks:
   
     - debug: 
-        msg: "OUTPUT IIIIIII {{ tower_job_id }} IIIIIII OUTPUT"
+        msg: "OUTPUT TOWERID {{ tower_job_id }} ===== OUTPUT WORKSPACE {{ workspace }}"
