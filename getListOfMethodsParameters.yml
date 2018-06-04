@@ -24,18 +24,18 @@
           attribute: "tower_job_id"
           value:  "{{ tower_job_id }}"
           
-    #- name: "Get an attribute"
-    #  manageiq_automate:
-    #    workspace: "{{ workspace }}"
-    #    get_attribute: 
-    #      object: "/Chain1/Service/Provisioning/StateMachines/Methods/MyInstance"
-    #      attribute: "::miq::parent"
-
-    - name: "Get a state_var"
+    - name: "Get an attribute"
       manageiq_automate:
         workspace: "{{ workspace }}"
-        get_state_var:
-          attribute: "task_id"
+        get_attribute: 
+          object: "/Chain1/Service/Provisioning/StateMachines/Methods/MyInstance"
+          attribute: "::miq::parent"
+
+    #- name: "Get a state_var"
+    #  manageiq_automate:
+    #    workspace: "{{ workspace }}"
+    #    get_state_var:
+    #      attribute: "task_id"
       
     - debug: 
         msg: "OUTPUT IIIIIII {{ tower_job_id }} IIIIIII OUTPUT"
