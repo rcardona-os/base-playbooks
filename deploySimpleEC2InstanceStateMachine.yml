@@ -40,4 +40,4 @@
           #instance_tags:
             #myIP: "{{  ec2 }}"
 
-    - debug: msg="DEPLOYMENT TOWERID => {{ ec2 }}"
+    - debug: msg="DEPLOYMENT TOWERID => {{ ec2.public_ip }}"
