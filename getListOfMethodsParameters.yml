@@ -23,12 +23,21 @@
           attribute: "tower_job_id"
           value:  "{{ tower_job_id }}"
           
+    - name: "Set an attribute"
+      manageiq_automate:
+        workspace: "{{ workspace }}"
+        set_attribute:
+          object: "root"
+          attribute: "mi_perro"
+          value:  "{{ tower_job_id }}"
+      register: workspace
+          
     - name: "Get an attribute"
       manageiq_automate:
         workspace: "{{ workspace }}"
         get_attribute: 
           object: "root"
-          attribute: "ec2_ip"
+          attribute: "mi_perro"
 
     #- name: "Get a state_var"
     #  manageiq_automate:
@@ -37,4 +46,4 @@
     #      attribute: "task_id"
       
     - debug: 
-        msg: "OUTPUT IIIIIII {{ tower_job_id }} IIIIIII OUTPUT"
+        msg: "OUTPUT IIIIIII {{ mi_perro }} IIIIIII OUTPUT"
