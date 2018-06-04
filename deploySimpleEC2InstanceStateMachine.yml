@@ -51,4 +51,4 @@
         workspace: "{{ workspace }}"
         get_attribute: 
           object: "root"
-          attribute: "ec2_ip"
+          attribute: "tower_job_id"
