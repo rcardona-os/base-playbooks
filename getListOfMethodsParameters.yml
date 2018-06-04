@@ -27,9 +27,9 @@
     - name: "Get an attribute"
       manageiq_automate:
         workspace: "{{ workspace }}"
-        get_attribute:
-          object: root
-          attribute: "ec2_ip"
+        get_attribute: 
+          object: "/Chain1/Service/Provisioning/StateMachines/Methods/MyInstance"
+          attribute: "::miq::parent"
       
     - debug: 
         msg: "OUTPUT IIIIIII {{ tower_job_id }} IIIIIII OUTPUT"
