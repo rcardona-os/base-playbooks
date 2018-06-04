@@ -22,12 +22,12 @@
         set_attribute:
           object: "root"
           attribute: "tower_job_id"
-          value:  "1158"
+          value:  "{{ tower_job_id }}"
           
     - name: "Get an attribute"
       manageiq_automate:
-        workspace: "{{ workspace }}"
+        workspace: c
         get_attribute: "root"
           attribute: "ec2_ip"
       
-    #- debug: msg="OUTPUT  OUTPUT OUTPUT  IIIIIII  {{ method_params }}   IIIIIII  OUTPUT  OUTPUT OUTPUT"
+    - debug: msg="OUTPUT  OUTPUT OUTPUT  IIIIIII  {{ tower_job_id }}   IIIIIII  OUTPUT  OUTPUT OUTPUT"
