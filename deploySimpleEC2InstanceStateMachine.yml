@@ -1,5 +1,4 @@
 ---
-# Create a simple VM
 
 - name: Create a simple VM instance
   hosts: localhost
@@ -21,7 +20,7 @@
           object: "root"
           attribute: "tower_job_id"
           value:  "{{ tower_job_id }}"
-          
+         
     - name: Deploy new VM instance
       ec2:
         key_name: "{{ my_key_name }}"
