@@ -6,8 +6,5 @@
   
   tasks:
   
-    - name: "STARTING TEST PLAYBOOK"
-      shell: yum info "{{ pkg }}"
-      register: yum_output
-      
-    - debug: msg="OUTPUT TEST PLAYBOOK {{ yum_output }}"
+    - debug: 
+        msg: "OUTPUT IIIIIII {{ tower_job_id }} IIIIIII OUTPUT"
