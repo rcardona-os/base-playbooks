@@ -50,5 +50,10 @@
       manageiq_automate:
         workspace: "{{ workspace }}"
         get_attribute: 
-          object: "root"
-          attribute: "::miq::parent"
+          object: "/Chain1/Service/Provisioning/StateMachines/Methods/MyInstance"
+          attribute: "root"
+
+
+
+
+#"/Chain1/Service/Provisioning/StateMachines/Methods/MyInstance": { "::miq::parent": "root" }
