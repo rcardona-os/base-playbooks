@@ -46,9 +46,9 @@
           value:  "{{ ec2.instances[0].public_ip }}"
       register: workspace
 
-    - name: "Get an attribute"
-      manageiq_automate:
-        workspace: "{{ workspace }}"
-        get_attribute: 
-          object: "root"
-          attribute: "ec2_ip"
+    #- name: "Get an attribute"
+    #  manageiq_automate:
+    #    workspace: "{{ workspace }}"
+    #    get_attribute: 
+    #      object: "root"
+    #      attribute: "ec2_ip"
