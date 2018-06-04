@@ -30,7 +30,6 @@
         get_attribute: 
           object: "root"
           attribute: "ec2_ip"
-        register: workspace
 
     #- name: "Get a state_var"
     #  manageiq_automate:
