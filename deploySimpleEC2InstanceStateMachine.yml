@@ -36,6 +36,15 @@
         instance_tags:
           app: "{{  app_name }}"
       register: ec2
+
+    - name: "Set an attribute"
+      manageiq_automate:
+        workspace: "{{ workspace }}"
+        set_attribute:
+          object: "root"
+          attribute: "my_name"
+          value:  "guerrero"
+      register: workspace
       
     - debug: 
         msg: "EC2.IP_1 => {{ ec2.instances[0].public_ip }} ; EC2.IP_2 => {{ ec2.instances[1].public_ip }}"
