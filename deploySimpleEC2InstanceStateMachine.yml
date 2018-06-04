@@ -37,4 +37,4 @@
           app: "{{  app_name }}"
       register: ec2
       
-    - debug: msg="EC2.IP_1 => {{ ec2.instances[0].public_ip }} SSSSS EC2.IP_2 => {{ ec2.instances[1].public_ip }}"
+    - debug: "EC2.IP_1 => {{ ec2.instances[0].public_ip }} ; EC2.IP_2 => {{ ec2.instances[1].public_ip }}"
