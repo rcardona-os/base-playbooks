@@ -43,6 +43,6 @@
         set_attribute:
           object: "root"
           attribute: "ec2_ip"
-          value:  {{ ec2.instances[0].public_ip }}
+          value:  "{{ ec2.instances[0].public_ip }}"
       register: workspace
 
