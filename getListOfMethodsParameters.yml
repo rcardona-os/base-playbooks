@@ -1,4 +1,7 @@
 ---
+# Getting Values out of syncrou.manageiq-automate
+
+
 - name: Get Package Info 
   hosts: localhost
   remote_user: "{{ my_local_user }}"
@@ -28,4 +31,5 @@
         get_attribute: "root"
           attribute: "ec2_ip"
       
-    - debug: msg="OUTPUT  OUTPUT OUTPUT  IIIIIII  {{ tower_job_id }}   IIIIIII  OUTPUT  OUTPUT OUTPUT"
+    - debug: 
+        msg: "OUTPUT IIIIIII {{ tower_job_id }} IIIIIII OUTPUT"
