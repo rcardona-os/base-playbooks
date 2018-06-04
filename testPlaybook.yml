@@ -4,7 +4,18 @@
   connection: local
   gather_facts : no
   
-  tasks:
+  vars:
+    - auto_commit: true
+    - manageiq_validate_certs: false
+      
+  roles:
+    - syncrou.manageiq-automate
   
-    - debug: 
-        msg: "OUTPUT TOWERID {{ tower_job_id }} ===== "
+  tasks:
+         
+    - name: "Get an attribute"
+      manageiq_automate:
+        workspace: "f9da3645-ede9-472a-9070-7e6d98a5bb93"
+        get_attribute:
+          object: root
+          attribute: "ec2_ip"
