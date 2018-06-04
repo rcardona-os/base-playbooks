@@ -15,7 +15,7 @@
          
     - name: "Get an attribute"
       manageiq_automate:
-        workspace: "f9da3645-ede9-472a-9070-7e6d98a5bb93"
+        workspace: "{{ workspace }}"
         get_attribute:
-          object: root
+          object: "/ManageIQ/System/Request/call_instance"
           attribute: "ec2_ip"
