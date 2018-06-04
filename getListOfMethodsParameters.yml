@@ -29,7 +29,8 @@
         workspace: "{{ workspace }}"
         get_attribute: 
           object: "root"
-          attribute: "::miq::parent"
+          attribute: "ec2_ip"
+        register: workspace
 
     #- name: "Get a state_var"
     #  manageiq_automate:
