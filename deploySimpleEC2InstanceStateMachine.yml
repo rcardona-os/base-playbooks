@@ -14,16 +14,6 @@
     - syncrou.manageiq-automate
   
   tasks:
-  
-    - name: "Set the job ID back into $evm.root"
-      manageiq_automate:
-        workspace: "{{ workspace }}"
-        set_attribute:
-          object: "root"
-          attribute: "tower_job_id"
-          value:  "{{ tower_job_id }}"
-          #instance_tags:
-            #myIP: "{{  ec2 }}"
             
     - name: Deploy new VM instance
       ec2:
@@ -39,5 +29,15 @@
         instance_tags:
           app: "{{  app_name }}"
       register: ec2
+   
+    - name: "Set the job ID back into $evm.root"
+      manageiq_automate:
+        workspace: "{{ workspace }}"
+        set_attribute:
+          object: "root"
+          attribute: "tower_job_id"
+          value:  "{{ tower_job_id }}"
+          #instance_tags:
+            #myIP: "{{  ec2 }}"
       
     - debug: msg="DEPLOYMENT TOWERID => {{ ec2.instances[0].public_ip }}"
