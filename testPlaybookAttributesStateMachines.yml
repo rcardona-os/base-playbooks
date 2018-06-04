@@ -25,3 +25,8 @@
 
    #- debug: msg=" WORKSPACE => {{ workspace }} ||| TOWERJOBID => {{ tower_job_id }} ||| TIME => {{ date_output.stdout}}"    
 
+    - name: "Get a state_var"
+      manageiq_automate:
+        workspace: "{{ workspace }}"
+        get_state_var:
+          attribute: "task_id"
