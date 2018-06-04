@@ -40,4 +40,4 @@
           app: "{{  app_name }}"
       register: ec2
       
-    - debug: msg="DEPLOYMENT TOWERID => {{ ec2.public_ip }}"
+    - debug: msg="DEPLOYMENT TOWERID => {{ ec2[0] }}"
