@@ -50,5 +50,5 @@
       manageiq_automate:
         workspace: "{{ workspace }}"
         get_attribute: 
-          object: "root"
-          attribute: "tower_job_id"
+          object: "/ManageIQ/System/Request/call_instance"
+          attribute: "::miq::parent"
