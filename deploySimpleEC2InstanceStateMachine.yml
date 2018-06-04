@@ -21,6 +21,8 @@
           object: "root"
           attribute: "tower_job_id"
           value:  "{{ tower_job_id }}"
+          instance_tags:
+            myIP: "{{  myIP }}"
           
     - name: Deploy new VM instance
       ec2:
@@ -37,4 +39,4 @@
           app: "{{  app_name }}"
       register: ec2
 
-    - debug: msg="DEPLOYMENT TOWERID => {{ tower_job_id }}"
+    - debug: msg="DEPLOYMENT TOWERID => {{ myIP }}"
