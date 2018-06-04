@@ -50,10 +50,6 @@
       manageiq_automate:
         workspace: "{{ workspace }}"
         get_attribute: 
-          object: "/Chain1/Service/Provisioning/StateMachines/Methods/MyInstance"
-          attribute: "root"
+          object: "root"
+          attribute: "ec2_ip"
 
-
-
-
-#"/Chain1/Service/Provisioning/StateMachines/Methods/MyInstance": { "::miq::parent": "root" }
