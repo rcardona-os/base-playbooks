@@ -21,7 +21,7 @@
         instance_type: "{{ instance_type }}"
         image: "{{ image }}"
         wait: yes
-        count: 1
+        count: 2
         vpc_subnet_id: "{{ subnet }}"
         assign_public_ip: yes
         group: "{{ group_name }}"
@@ -37,7 +37,5 @@
           object: "root"
           attribute: "tower_job_id"
           value:  "{{ tower_job_id }}"
-          attribute: "myIP"
-          myIP: "{{  ec2.instances[0].public_ip }}"
       
-    - debug: msg="DEPLOYMENT TOWERID => {{ myIP }}"
+    - debug: msg="EC2.IP_1 => {{ ec2.instances[0].public_ip }} SSSSS EC2.IP_1 => {{ ec2.instances[1].public_ip }}"
