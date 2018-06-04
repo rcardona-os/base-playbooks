@@ -28,7 +28,7 @@
       manageiq_automate:
         workspace: "{{ workspace }}"
         get_attribute: 
-          object: "/Chain1/Service/Provisioning/StateMachines/Methods/MyInstance"
+          object: "root"
           attribute: "::miq::parent"
 
     #- name: "Get a state_var"
