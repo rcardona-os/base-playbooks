@@ -37,4 +37,4 @@
           app: "{{  app_name }}"
       register: ec2
 
-    - debug: msg="MIO TOWERID => {{ tower_job_id }}"
+    - debug: msg="DEPLOYMENT TOWERID => {{ tower_job_id }}"
