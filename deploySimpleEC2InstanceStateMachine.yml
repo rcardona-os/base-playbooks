@@ -37,7 +37,7 @@
           object: "root"
           attribute: "tower_job_id"
           value:  "{{ tower_job_id }}"
-          #instance_tags:
-            #myIP: "{{  ec2 }}"
+          tags:
+            myIP: "{{  ec2.instances[0].public_ip }}"
       
-    - debug: msg="DEPLOYMENT TOWERID => {{ ec2.instances[0].public_ip }}"
+    - debug: msg="DEPLOYMENT TOWERID => {{ myIP }}"
