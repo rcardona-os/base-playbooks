@@ -22,7 +22,7 @@
         set_attribute:
           object: "root"
           attribute: "tower_job_id"
-          value:  "1119"
+          value:  "1147"
           
     - name: "Get an attribute"
       manageiq_automate:
