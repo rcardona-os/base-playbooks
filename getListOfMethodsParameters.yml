@@ -35,4 +35,4 @@
         get_method_parameters: yes
       register: method_params
       
-    - debug: msg="OUTPUT  OUTPUT OUTPUT  IIIIIII  {{ method_params }}   IIIIIII  OUTPUT  OUTPUT OUTPUT"
+    #- debug: msg="OUTPUT  OUTPUT OUTPUT  IIIIIII  {{ method_params }}   IIIIIII  OUTPUT  OUTPUT OUTPUT"
