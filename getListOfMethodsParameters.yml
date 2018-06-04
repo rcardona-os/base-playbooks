@@ -4,7 +4,6 @@
 
 - name: Get Package Info 
   hosts: localhost
-  remote_user: "{{ my_local_user }}"
   connection: local
   gather_facts : no
   
