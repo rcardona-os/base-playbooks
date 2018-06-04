@@ -27,7 +27,7 @@
     - name: "Get an attribute"
       manageiq_automate:
         workspace: "{{ workspace }}"
-        get_attribute: object: "root"
+        get_attribute: "root"
           attribute: "ec2_ip"
       
     #- debug: msg="OUTPUT  OUTPUT OUTPUT  IIIIIII  {{ method_params }}   IIIIIII  OUTPUT  OUTPUT OUTPUT"
