@@ -28,7 +28,7 @@
         instance_type: "{{ instance_type }}"
         image: "{{ image }}"
         wait: yes
-        count: 2
+        count: 1
         vpc_subnet_id: "{{ subnet }}"
         assign_public_ip: yes
         group: "{{ group_name }}"
@@ -42,9 +42,7 @@
         workspace: "{{ workspace }}"
         set_attribute:
           object: "root"
-          attribute: "my_name"
-          value:  "guerrero"
+          attribute: "ec2_ip"
+          value:  {{ ec2.instances[0].public_ip }}
       register: workspace
-      
-    - debug: 
-        msg: "EC2.IP_1 => {{ ec2.instances[0].public_ip }} ; EC2.IP_2 => {{ ec2.instances[1].public_ip }}"
+
