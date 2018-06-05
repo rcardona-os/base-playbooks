@@ -20,10 +20,13 @@
           attribute: "tower_job_id"
           value:  "{{ tower_job_id }}"
          
-    - name: "Get a state_var"
+    - name: "SET ATTRIBUTE IN WORKSPACE"
       manageiq_automate:
         workspace: "{{ workspace }}"
-        get_state_var:
-          attribute: "ec2_ip"
+        set_attribute:
+          object: "root"
+          attribute: "ec2_ip_new"
+          value:  "18.184.89.103"
+      register: workspace
       
       
