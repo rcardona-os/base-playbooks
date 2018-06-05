@@ -1,8 +1,11 @@
 ---
-- name: Install and setup http webserver
-  hosts: localhost
-  connection: local
-  gather_facts: no
+- name: This sets up a httpd webserver
+  hosts: all
+  connection: ssh
+  remote_user: ec2-user
+  become_method : sudo
+  become: yes
+  gather_facts : no
   
   vars:
     - auto_commit: true
@@ -27,13 +30,6 @@
           attribute: "ec2_ip"
   
   tasks:
-    - name: Installing HTTPD Server
-      hosts: "{{ ec2_ip }}"
-      connection: ssh
-      remote_user: ec2-user
-      become_method : sudo
-      become: yes
-      gather_facts : no
       yum: 
         name: httpd 
         state: latest
