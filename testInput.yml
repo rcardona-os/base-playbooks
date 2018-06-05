@@ -25,5 +25,5 @@
         workspace: "{{ workspace }}"
         set_state_var:
           attribute: "ec2_ip"
-          value: "999.999.999.999"
+          value: "18.184.89.103"
       register: workspace
