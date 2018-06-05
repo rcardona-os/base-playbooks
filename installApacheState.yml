@@ -1,0 +1,19 @@
+---
+# Install and setup http webserver
+
+- name: This sets up a httpd webserver
+  hosts: "{{ ec2_ip }}"
+  connection: ssh
+  remote_user: ec2-user
+  become_method : sudo
+  become: yes
+  gather_facts : no
+  tasks:
+    - name: Installing HTTPD Server
+      yum: 
+        name: httpd 
+        state: latest
+    - name: Restart the HTTPD Service
+      service:
+        name: httpd 
+        state: restarted
