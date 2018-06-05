@@ -1,15 +1,39 @@
 ---
-# Install and setup http webserver
-
-- name: This sets up a httpd webserver
-  hosts: "{{ ec2_ip }}"
-  connection: ssh
-  remote_user: ec2-user
-  become_method : sudo
-  become: yes
-  gather_facts : no
+- name: Install and setup http webserver
+  hosts: localhost
+  connection: local
+  gather_facts: no
+  
+  vars:
+    - auto_commit: true
+    - manageiq_validate_certs: false
+    
+  roles:
+    - syncrou.manageiq-automate
+  
+  tasks:
+    - name: "Set the job ID back into $evm.root"
+      manageiq_automate:
+        workspace: "{{ workspace }}"
+        set_attribute:
+          object: "root"
+          attribute: "tower_job_id"
+          value:  "{{ tower_job_id }}"
+         
+    - name: "Get a state_var"
+      manageiq_automate:
+        workspace: "{{ workspace }}"
+        get_state_var:
+          attribute: "ec2_ip"
+  
   tasks:
     - name: Installing HTTPD Server
+      hosts: "{{ ec2_ip }}"
+      connection: ssh
+      remote_user: ec2-user
+      become_method : sudo
+      become: yes
+      gather_facts : no
       yum: 
         name: httpd 
         state: latest
