@@ -33,7 +33,7 @@
       manageiq_automate:
         workspace: "{{ workspace }}"
         set_state_var:
-          attribute: "ec2_ip_new"
+          attribute: "ec2_ip"
           value: "18.184.89.103"
       register: workspace
       
