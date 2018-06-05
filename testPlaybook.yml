@@ -20,27 +20,10 @@
           attribute: "tower_job_id"
           value:  "{{ tower_job_id }}"
          
-    - name: Deploy new VM instance
-      ec2:
-        key_name: "{{ my_key_name }}"
-        instance_type: "{{ instance_type }}"
-        image: "{{ image }}"
-        wait: yes
-        count: 1
-        vpc_subnet_id: "{{ subnet }}"
-        assign_public_ip: yes
-        group: "{{ group_name }}"
-        region: "{{ region }}"
-        instance_tags:
-          app: "{{  app_name }}"
-      register: ec2
-      
-    - name: "Set a State Var"
+    - name: "Get a state_var"
       manageiq_automate:
         workspace: "{{ workspace }}"
-        set_state_var:
+        get_state_var:
           attribute: "ec2_ip"
-          value: "{{ ec2.instances[0].public_ip }}"
-      register: workspace
       
       
