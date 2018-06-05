@@ -30,6 +30,7 @@
           attribute: "ec2_ip"
   
   tasks:
+    - name: Installing HTTPD Server
       yum: 
         name: httpd 
         state: latest
